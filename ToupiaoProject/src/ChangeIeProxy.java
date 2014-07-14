@@ -18,18 +18,11 @@ public class ChangeIeProxy {
 	public static void main(String[] args) throws ClientProtocolException, IOException {
 		// TODO Auto-generated method stub
 		//获取代理
-		/*
 		ArrayList<String> proxy = getProxy(null);
 		//得到代理
 		if(proxy!=null && proxy.size()==2){
-			createBatFile(proxy);
+			createBatFile(proxy.get(0),8088);
 		}
-		*/
-		
-//		String proxy="36.237.142.15:8088";
-		String host="120.1.30.51";
-		int port=8088;
-		createBatFile(host, port);
 		
 	}
 	
