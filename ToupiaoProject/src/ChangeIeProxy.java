@@ -27,7 +27,7 @@ public class ChangeIeProxy {
 		*/
 		
 //		String proxy="36.237.142.15:8088";
-		String host="36.237.142.15";
+		String host="120.1.30.51";
 		int port=8088;
 		createBatFile(host, port);
 		
@@ -63,7 +63,7 @@ public class ChangeIeProxy {
 		String openIE="bat/openIE.bat";
 		String openIECmd="@echo off \r\n"
 			+"echo 正在打开ie \r\n"
-			+"start \"\" \"c:\\Program Files\\Internet Explorer\\iexplore.exe\" http://www.njxjyj.com/yxjs/view.asp?id=111 ";
+			+"start \"\" \"c:\\Program Files\\Internet Explorer\\iexplore.exe\" www.njxjyj.com/yxjs/view.asp?id=111 ";
 		createFile(openIE, openIECmd ,false);
 		
 		String closeIE="bat/closeIE.bat";
@@ -108,7 +108,14 @@ public class ChangeIeProxy {
 	
 	private static ArrayList<String> getProxy(String req) throws ClientProtocolException, IOException{
 		if( req==null){
-			req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&port=8088&style=3";
+			//全国(包括台湾)
+//			req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&port=8088&style=3";
+			//北京
+//			req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&filter=%b1%b1%be%a9&port=8088&style=3";
+			//石家庄
+			req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&filter=%ca%af%bc%d2%d7%af&port=8088&style=3";
+			//邢台
+//			req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&filter=%d0%cf%cc%a8&port=8088&style=3";
 		}
 		Executor executor = Executor.newInstance();
         // Execute a GET with timeout settings and return response content as String.

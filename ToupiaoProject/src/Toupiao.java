@@ -22,7 +22,8 @@ public class Toupiao {
 	public static void main(String[] args) throws ClientProtocolException, IOException {
 		// TODO Auto-generated method stub
 		
-		
+		//北京地区
+		//http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&filter=%b1%b1%be%a9&port=8088&style=3
 		Timer mytimer=new Timer();
 		mytimer.schedule(new TimerTask() {
 			
@@ -90,7 +91,14 @@ public class Toupiao {
 	//http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&port=8088&style=3
 	private static ArrayList<String> getProxy(String req) throws ClientProtocolException, IOException{
 		if( req==null){
-			req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&port=8088&style=3";
+			//全国
+//			req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&port=8088&style=3";
+			//北京
+//			req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&filter=%b1%b1%be%a9&port=8088&style=3";
+			//石家庄
+			req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&filter=%ca%af%bc%d2%d7%af&port=8088&style=3";
+			//邢台
+//			req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&filter=%d0%cf%cc%a8&port=8088&style=3";
 		}
 		Executor executor = Executor.newInstance();
         // Execute a GET with timeout settings and return response content as String.

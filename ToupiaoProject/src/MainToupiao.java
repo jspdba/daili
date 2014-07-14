@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import javax.swing.JOptionPane;
-
 import org.apache.http.HttpHost;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.fluent.Executor;
@@ -96,7 +94,7 @@ public class MainToupiao {
 			executor.cookieStore(cookieStore);//保存cookie
 
 	        // Execute a GET with timeout settings and return response content as String.
-	        executor.execute(Request.Get("http://www.njxjyj.com/yxjs/view.asp?id=108")//这里需要修改！！
+	        executor.execute(Request.Get("http://www.njxjyj.com/yxjs/view.asp?id=114")//这里需要修改！！
 	                .connectTimeout(10000)
 	                .socketTimeout(10000)
 //	                .viaProxy(new HttpHost(host, 8088))
@@ -141,7 +139,14 @@ public class MainToupiao {
 		 */
 		private static ArrayList<String> getProxy(String req) throws ClientProtocolException, IOException{
 			if( req==null){
-				req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&port=8088&style=3";
+				//全国
+//				req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&port=8088&style=3";
+				//北京
+//				req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&filter=%b1%b1%be%a9&port=8088&style=3";
+				//石家庄
+				req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&filter=%ca%af%bc%d2%d7%af&port=8088&style=3";
+				//邢台
+//				req="http://www.tkdaili.com/api/getiplist.aspx?vkey=0BD06E292F31222BA38F46E53EA3D09B&num=1&country=CN&filter=%d0%cf%cc%a8&port=8088&style=3";
 			}
 			Executor executor = Executor.newInstance();
 	        // Execute a GET with timeout settings and return response content as String.
